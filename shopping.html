@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shopping.css">
+    <script src="js/client.js"></script>
+    <script src="js/shopping.js"></script>
+    <script>
+        window.onload=function(){
+             size();
+            var proItemShow=document.getElementById("proItemShow");
+            var color=getElementsByClassName('color',document)[0];
+            colors(color);
+            var proItem_left=getElementsByClassName('proItem_left',document)[0];
+            var litterImg=proItem_left.getElementsByTagName("ul")[0];
+            colors(litterImg);
+            scale();
+            numOperater();
+            buys();
+            timer=setInterval(indexImg,3000);
+            toTop();
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <!-- 头部及导航区域-->
+        <div class="header">
+            <div class="logo">
+               <div class="indexlogo">
+                   <a href="javascript:void(0);"><img src="image/index/logo.png" alt=""></a>
+               </div>
+                <div class="headLink">
+                    <a href="javascript:void(0);"><img src="image/index/head1.jpg" alt=""></a>
+                    <a href="javascript:void(0);"><img src="image/index/head2.jpg" alt=""></a>
+                    <a href="javascript:void(0);"><img src="image/index/head3.jpg" alt=""></a>         
+                </div>
+                <div class="tdc">
+                    <a href="javascript:void(0);"><img src="image/index/tdc.png" alt=""></a>
+                    <dl>
+                        <dt>秋装上新</dt>
+                        <dd>每周上新</dd>
+						<dd>AUTUMN</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="Nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="product.html">全部</a></li>
+                    <li><a href="javascript:void(0);">秋季卫衣</a></li>
+                    <li class="active"><a href="shopping.html">毛衣/针织衫</a></li>
+                    <li><a href="javascript:void(0);">裙装/裤子</a></li>
+                    <li><a href="javascript:void(0);">店铺动态</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="javascript:void(0);">清仓</a></li>
+                </ul>
+                <div class="search">
+                    <form action="">
+						<input type="text" placeholder="搜你所想...">
+						<input type="button" value="搜索">
+					</form>
+                </div>
+            </div>
+        </div>
+         <div class="proItem">
+             <div class="proItemDetail">
+                 <div class="proItem_left">
+                     <img src="image/shopping/litter1.jpg" alt="litter1" id="proItemShow">
+                     <div id="move"></div>
+                     <div id="scale"></div>
+                     <ul>
+                        <li title="litter1" class="checked"><img src="image/shopping/litter1.jpg" alt="litter1"></li>
+                        <li title="litter2"><img src="image/shopping/litter2.jpg" alt="litter2"></li>
+                        <li title="litter3"><img src="image/shopping/litter3.jpg" alt="litter3"></li>
+                        <li title="litter4"><img src="image/shopping/litter4.jpg" alt="litter4"></li>
+                        <li title="litter5"><img src="image/shopping/litter5.jpg" alt="litter5"></li>
+                    </ul>
+                 </div>
+                 <div class="proItem_right">
+                    <h1>瑗斯2016秋季新卡通字母印花套头卫衣女撞色圆领长袖学生宽松百搭</h1>
+                    <p>可爱卡通字母 印花撞色拼接 设计休闲百搭</p>
+                    <p style='color:#909496'>新卡通字母印花套头卫衣女撞色圆领长袖学生宽松百搭,采用优质面料，时尚的花边拼接给你最好的感受新卡通字母印花套头卫衣女撞色圆领</p>
+                    <ul>
+                        <li>
+                            <span>价&#12288;&#12288;格:</span>
+                            <span>￥</span><del>109.00</del>
+                        </li>
+                        <li class="price">
+                            <span>促&#12288;&#12288;销:</span>
+                            <span>￥</span><strong>59.9</strong>
+                        </li>
+                        <li class="freight">
+                            <span>运&#12288;&#12288;费:</span><span>&nbsp;免运费</span>
+                        </li>
+                        <li class="sales">
+                            <ul>
+                                <li><span>月销量</span><strong>345件</strong></li>
+                                <li><span>累计评价</span><strong>30</strong></li>
+                                <li><span>积分送</span><strong style="color:green;">12分</strong></li>
+                            </ul>
+                        </li>
+                        <li class='size'>
+                            <span>尺&#12288;&#12288;码:</span>
+                            <ul>
+                                <li class="checked">S</li>
+                                <li>M</li>
+                                <li>L</li>
+                                <li>XL</li>
+                            </ul>
+                        </li>
+                        <li class='color'>
+                            <span>颜&#12288;&#12288;色:</span>
+                            <ul>
+                                <li class="checked" title="litter1"><img src="image/shopping/litter1.jpg" alt="鹅黄色"></li>
+                                <li title="litter3"><img src="image/shopping/litter3.jpg" alt="天蓝色"></li>
+                            </ul>
+                        </li>
+                        <li class='number'>
+                            <span>数&#12288;&#12288;量:</span>
+                            <div>
+                                <span id="subnum" class="num_operate">-</span>
+                                <input type="text" value="1" id="num">
+                                <span id="addnum" class="num_operate">+</span>
+                            </div>
+                            <span>库存:123件</span>
+                        </li>
+                        <li class='buy'>
+                            <a href="" id="buyNow">立即购买</a>
+                            <a href="">加入购物车</a>
+                        </li>
+                    </ul>
+                 </div>
+             </div>
+             <div class="proItem_close">
+                 <div class="closeShow">
+                    <div class="scrollA">
+                        <a href="javascript:void(0);"><img src="image/shopping/closeLeft1.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft2.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft3.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft4.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft5.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft6.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft2.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft3.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="image/shopping/closeLeft1.jpg" alt=""></a>
+                    </div>
+                 </div>
+                 <span>&lt;</span>
+                 <span>&gt;</span>
+             </div>
+         </div>
+         <div class="proButtom">
+             <div class="protoLists">
+                 <div class="listShop">
+                     <ul>
+                         <li><a href="javascript:void(0);">瑗斯旗舰店</a></li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/index/logo.png" alt="">
+                             </a>
+                             <a href="javascript:void(0);" class="goto">进店逛逛</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><img src="image/shopping/collect.png" alt=""></a>
+                        </li>
+                     </ul>
+                 </div>
+                 <div class="closeList">
+                     <ul>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft1.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft1.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft2.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft3.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft4.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft6.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft5.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft1.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                         <li>
+                             <a href="javascript:void(0);">
+                                 <img src="image/shopping/closeLeft3.jpg" alt="">
+                             </a>
+                             <a href="javascript:void(0);">无帽蝴蝶刺绣卫衣</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+            <!--商品评价区域-->
+             <div class="protoIntro">
+                 <div class="tabControl">
+                     <ul>
+                         <li class="Tactive">商品详情</li>
+                         <li>商品评价</li>
+                     </ul>
+                     <div class="tabContent tabActive">
+                         <div class="productDetail">
+                             <img src="image/shopping/litter1.jpg" alt="">
+                             <p>
+                                 这款衣服在设计上十分美观大方,面料舒适造型也十分可爱，加入蕾丝，卡通的元素，可爱俏皮，这是秋季不可或缺的一款美衣,这款衣服在设计上十分美观大方,面料舒适造型也十分可爱，加入蕾丝，卡通的元素，可爱俏皮，这是秋季不可或缺的一款美衣<span>这款衣服在设计上十分美观大方,面料舒适造型也十分可爱</span>
+                             </p>
+                         </div>
+                         <h2 style="clear:both;">产品参数</h2>
+                         <ul class="productCs">
+                             <li>材质成分：棉</li>
+                            <li>服装版型：宽松</li>
+                            <li>通勤：韩版</li>
+                            <li>衣长：常规</li>
+                            <li>袖型：蝙蝠袖</li>
+                            <li>服装款式细节：蕾丝</li>
+                            <li>颜色分类：黄色，蓝色</li>
+                            <li>材质成分：棉</li>
+							<li>服装版型：宽松</li>
+							<li>通勤：韩版</li>
+							<li>衣长：常规</li>
+							<li>袖型：蝙蝠袖</li>
+							<li>服装款式细节：蕾丝</li>
+							<li>颜色分类：黄色，蓝色</li>
+                            <li>材质成分：棉</li>
+							<li>服装版型：宽松</li>
+							<li>通勤：韩版</li>
+							<li>衣长：常规</li>
+							<li>袖型：蝙蝠袖</li>
+							<li>服装款式细节：蕾丝</li>
+							<li>颜色分类：黄色，蓝色</li>
+                         </ul>
+                     </div>
+                     <div class="commentContent">
+                         <div class="score">
+                             <h2>整体评分:</h2>
+                             <span></span>
+                             <ul>
+                                 <li>
+                                     <span>宝贝评分</span>
+                                     <span></span>
+                                 </li>
+                                 <li>
+                                     <span>价格评分</span>
+                                     <span></span>
+                                 </li>
+                                 <li>
+                                     <span>质量评分</span>
+                                     <span></span>
+                                 </li>
+                                 <li>
+                                     <span>物流评分</span>
+                                     <span></span>
+                                 </li>
+                             </ul>
+                         </div>
+                         <div class="scoreButtom">
+                            <h1>&nbsp;评论专区</h1>
+                             <table>
+                                 <tr>
+                                     <td>
+                                         <p>宝贝收到了，包装很好看，打开包一看很漂亮的宝贝，试一下很合适，朋友看了给了赞！物流快服务太度很好</p>
+                                         <span>01.20</span>
+                                     </td>
+                                     <td>
+                                         <p>颜色分类:<span>深蓝色</span></p>
+                                         <p>尺码:<span>M</span></p>
+                                     </td>
+                                     <td>
+                                         <p>周<span>**</span>0<span>(匿名)</span></p>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>
+                                         <p>宝贝收到了，包装很好看，打开包一看很漂亮的宝贝，试一下很合适，朋友看了给了赞！物流快服务太度很好</p>
+                                         <span>01.20</span>
+                                     </td>
+                                     <td>
+                                         <p>颜色分类:<span>深蓝色</span></p>
+                                         <p>尺码:<span>M</span></p>
+                                     </td>
+                                     <td>
+                                         <p>周<span>**</span>0<span>(匿名)</span></p>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>
+                                         <p>宝贝收到了，包装很好看，打开包一看很漂亮的宝贝，试一下很合适，朋友看了给了赞！物流快服务太度很好</p>
+                                         <span>01.20</span>
+                                     </td>
+                                     <td>
+                                         <p>颜色分类:<span>深蓝色</span></p>
+                                         <p>尺码:<span>M</span></p>
+                                     </td>
+                                     <td>
+                                         <p>周<span>**</span>0<span>(匿名)</span></p>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>
+                                         <p>宝贝收到了，包装很好看，打开包一看很漂亮的宝贝，试一下很合适，朋友看了给了赞！物流快服务太度很好</p>
+                                         <span>01.20</span>
+                                     </td>
+                                     <td>
+                                         <p>颜色分类:<span>深蓝色</span></p>
+                                         <p>尺码:<span>M</span></p>
+                                     </td>
+                                     <td>
+                                         <p>周<span>**</span>0<span>(匿名)</span></p>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>
+                                         <p>宝贝收到了，包装很好看，打开包一看很漂亮的宝贝，试一下很合适，朋友看了给了赞！物流快服务太度很好</p>
+                                         <span>01.20</span>
+                                     </td>
+                                     <td>
+                                         <p>颜色分类:<span>深蓝色</span></p>
+                                         <p>尺码:<span>M</span></p>
+                                     </td>
+                                     <td>
+                                         <p>周<span>**</span>0<span>(匿名)</span></p>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>
+                                         <p>宝贝收到了，包装很好看，打开包一看很漂亮的宝贝，试一下很合适，朋友看了给了赞！物流快服务太度很好</p>
+                                         <span>01.20</span>
+                                     </td>
+                                     <td>
+                                         <p>颜色分类:<span>深蓝色</span></p>
+                                         <p>尺码:<span>M</span></p>
+                                     </td>
+                                     <td>
+                                         <p>周<span>**</span>0<span>(匿名)</span></p>
+                                     </td>
+                                 </tr>
+                             </table>
+                         </div>
+                     </div>
+                     <div class="showProduct">
+                         <img src="image/shopping/show.jpg" alt="">
+                         <img src="image/shopping/show1.jpg" alt="" id="showSize">
+                         <img src="image/shopping/show2.jpg" alt="" id="showImage">
+                         <img src="image/shopping/show3.jpg" alt="">
+                         <img src="image/shopping/show4.jpg" alt="">
+                         <img src="image/shopping/show5.jpg" alt="" id="showModle">
+                         <img src="image/shopping/show6.jpg" alt="">
+                         <img src="image/shopping/show7.jpg" alt="">
+                         <img src="image/shopping/show8.jpg" alt="">
+                         <img src="image/shopping/show9.jpg" alt="" id="project">
+                         <img src="image/shopping/show10.jpg" alt="">
+                         <img src="image/shopping/show11.jpg" alt="" id="detail">
+                         <img src="image/shopping/show12.jpg" alt="">
+                         <img src="image/shopping/show13.jpg" alt="">
+                     </div>
+                 </div>
+                 <div class="tabfixed">
+                     <dl>
+                         <dd><a href="#showSize">商品尺码</a></dd>
+                         <dd><a href="#showImage">形象展示</a></dd>
+                         <dd><a href="#showModle">模特展示</a></dd>
+                         <dd><a href="#project">设计/随心搭配</a></dd>
+                         <dd><a href="#detail">细节展示</a></dd>
+                     </dl>
+                 </div>
+             </div>
+         </div>
+          <!--页面底部-->
+        <div class="bottom">
+			<div class="bottoms bottom_left">
+				<img src="image/index/bottom.jpg" alt="bottom" id="bottom">
+			</div>
+			<div class="bottoms bottom_right">
+				<img src="image/index/logo.png" alt="bottom">
+				<span>瑗斯&nbsp;&nbsp;小清新的美</span>
+			</div>
+			<div class="bottom_bottom">
+				<dl>
+					<dt><a href="">全部商品</a></dt>
+					<dd><a href="">上衣</a></dd>
+					<dd><a href="">夏装</a></dd>
+					<dd><a href="">裙子</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="">2016秋季新款</a></dt>
+					<dd><a href="">8月31日</a></dd>
+					<dd><a href="">8月30日</a></dd>
+					<dd><a href="">8月29日</a></dd>
+					<dd><a href="">8月28日</a></dd>
+					<dd><a href="">8月27日</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="">秋季新款</a></dt>
+					<dd><a href="">连帽卫衣</a></dd>
+					<dd><a href="">套头卫衣</a></dd>
+					<dd><a href="">套头毛衣</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="">下装</a></dt>
+					<dd><a href="">牛仔裤</a></dd>
+					<dd><a href="">背带裤</a></dd>
+					<dd><a href="">休闲裤</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="">裙子</a></dt>
+					<dd><a href="">连衣裙</a></dd>
+					<dd><a href="">背带裙</a></dd>
+					<dd><a href="">半截裙</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="">色彩系</a></dt>
+					<dd><a href="">纯色</a></dd>
+					<dd><a href="">撞色</a></dd>
+					<dd><a href="">白色</a></dd>
+					<dd><a href="">粉色</a></dd>
+					<dd><a href="">蓝色</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="">时尚元素</a></dt>
+					<dd><a href="">印花</a></dd>
+					<dd><a href="">条纹</a></dd>
+					<dd><a href="">荷叶边</a></dd>
+					<dd><a href="">蕾丝</a></dd>
+				</dl>
+					<dl>
+					<dt><a href="">时尚元素</a></dt>
+					<dd><a href="">印花</a></dd>
+					<dd><a href="">条纹</a></dd>
+					<dd><a href="">荷叶边</a></dd>
+					<dd><a href="">蕾丝</a></dd>
+				</dl>
+			</div>
+		</div>
+        <div class="ensure">
+            <hr>
+			<img src="image/index/ensure.png" alt="">
+			<hr>
+        </div>
+        <div id="buy">
+            <div class="bg"></div>
+            <dl>
+                <dt>购买提示<span>(请确认您的购买信息)</span></dt>
+                <dd>尺寸：<span id="buySize"></span></dd>
+                <dd>颜色：<span id="buyColor"></span></dd>
+                <dd>数量：<span id="buyNum"></span></dd>
+                <dd>地址：<span id="buyAddress">北京</span></dd>
+                <dd><a href="" id="yes">确认</a><a href="" id="no">取消</a></dd>
+            </dl>
+        </div>
+        <!--浮动导航-->
+        <div class="floatNav">
+           <div>
+               <span><a href="javascript:void(0);">瑗斯旗舰店</a></span>
+                <ul>
+                     <li class="Tactive">商品详情</li>
+                     <li>商品评价</li>
+                </ul>
+                <div class="tabfixed">
+                     <dl>
+                         <dd><a href="#showSize">商品尺码</a></dd>
+                         <dd><a href="#showImage">形象展示</a></dd>
+                         <dd><a href="#showModle">模特展示</a></dd>
+                         <dd><a href="#project">设计/随心搭配</a></dd>
+                         <dd><a href="#detail">细节展示</a></dd>
+                     </dl>
+                 </div>
+            </div>
+        </div>
+        <div class="totop">
+            <span></span>
+        </div>        
+    </div>
+</body>
+</html>

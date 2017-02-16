@@ -1,0 +1,87 @@
+.contact{width:1100px;margin:20px auto;overflow:hidden;}
+.contact>div{box-sizing:border-box;float:left;}
+.contact .navLeft{width:20%;margin-right:2%;}
+.contact .contact_right{width:77%;}
+.navLeft ul{width:100%;text-align:center;}
+.navLeft ul li{width:100%;height:60px;line-height:60px;font-size:16px;cursor:pointer;border:1px solid #aaa;}
+.navLeft ul li+li{border-top:none;}
+.navLeft ul li:nth-of-type(1){border-top:5px solid #eee;}
+.navLeft ul li:nth-of-type(1) a{color:#000;font-weight:bolder;}
+.navLeft ul li:nth-of-type(2){height:150px;}
+.navLeft ul li:nth-of-type(2) img{width:100%;height:80px;}
+.navLeft ul li:nth-of-type(2) a:nth-of-type(2){display:block;width:70px;height:30px;line-height:30px; background:#000;margin:0 auto; font-size:14px;color:#fff;font-weight:bold;}
+.navLeft ul li:hover{background:#eee;}
+.contact_right .gradu .gradu_title,.contact_right .gradu .graduShow{float:left;}
+.contact_right .gradu,.contact_right .navLeftContent{width:100%;border:1px dotted #aaa;}
+.contact_right .gradu{height:253px;margin-bottom:10px;}
+.gradu .gradu_title{position:relative;width:220px;height:250px;}
+.gradu .gradu_title img{width:100%;height:100%;}
+.gradu .gradu_title span{position:absolute;left:0;bottom:0; width:100%;height:50px;line-height:50px; text-align:center;font-size:20px;font-weight:bolder;background:#a8d1ed;color:#fff;animation-name:change;animation-duration:2s;animation-timing-function:ease;animation-iteration-count:infinite;animation-fill-mode:forwards;}
+@keyframes change{
+    from{bottom:0;}
+    50%{bottom:30px;}
+    to{bottom:0;}
+}
+.gradu .graduShow{position:relative;width:540px;height:180px;margin-top:32px;margin-left:45px; overflow:hidden;}
+.graduShow .graduContentShow{position:absolute;left:0;top:0;width:3000px;height:180px;transition:1.2s;}
+.graduShow .graduContentShow li{width:540px;box-sizing:border-box;float:left;}
+.graduShow .graduContentShow img{float:left;width:178px;height:178px;margin-right:2px;}
+.graduShow .graduContentShow .slow{transition:0s;}
+/*选项卡内容区域*/
+.navLeftContent{position:relative;width:100%;overflow:hidden;}
+.navLeftContent .right{position:absolute;top:0;left:0;padding:20px 25px;width:100%;display:none;box-sizing:border-box;}
+.right .TabContent{width:770px;}
+.right .TabStrech{width:650px;overflow:hidden;}
+.right .joinContent{width:760px;}
+.navLeftContent .Cactive{display:block;}
+.Tablabel{position:relative;height:30px;line-height:30px;width:90px;text-align:center;font-size:14px;background:#000;color:#fff;margin-bottom:15px;}
+.Tablabel::before{position:absolute;content:"";top:5px;left:8px;width:10px;height:10px;border:1px solid #fff;border-bottom:none;border-right:none;}
+.Tablabel::after{position:absolute;content:"";bottom:5px;right:8px;width:10px;height:10px;border:1px solid #fff;border-top:none;border-left:none;}
+.TabContent{box-sizing:border-box;border:1px solid #eee;overflow:hidden;padding:15px;}
+.TabContent ul,.TabContent .contactInfo{width:50%;float:left;}
+.TabContent ul li{height:60px;line-height:60px;}
+.TabContent input[type="submit"]{width:80px;height:35px;line-height:35px;margin-left:228px; border:none;border-radius:5px;}
+.TabContent input,.TabContent textarea{width:200px;height:40px;margin-left: 10px;border: 1px solid #a9d8e8;padding-left:10px;font-size:14px;}
+.TabContent .contactInfo textarea{width:295px;height:175px;margin:0;resize: none;}
+.TabContent input[type="submit"]{width:80px;height:35px;line-height:35px;margin-left:228px; border:none;border-radius:5px;}
+.advice .TabContent ul li{height:125px; margin-bottom:10px;}
+.advice .TabContent ul li textarea{width:550px;height:80px;resize:none;}
+.advice .TabContent ul li span{display:block;height:45px;padding-left:10px;}
+.advice .TabContent ul li input[type="submit"]{margin-left:10px;}
+/*付款问题和退款问题共用样式--（拉伸二级导航）*/
+.TabStrech{width:95%;}
+.TabStrech ul{width:50%;overflow:hidden;float:left;}
+.TabStrech ul li{box-sizing:border-box;width:325px;padding-left:25px;margin-bottom:10px;cursor:pointer;}
+.TabStrech ul li span{box-sizing:border-box; display:inline-block;background:#eee;width:100%;height:60px;line-height:60px; padding-left:20px;border-radius:5px;}
+.TabStrech ul li:hover>div{height:165px;border:1px solid #bae2ee;}
+.TabStrech ul li div{box-sizing:border-box;width:100%;height:0;overflow:hidden;transition:0.6s}
+.TabStrech ul li div p{padding:10px 30px;}
+.TabStrech ul li div p:hover{background:#bae2ee;color:#fff;}
+/*********************************/
+.privilege ul{width:100%;overflow:hidden;margin-top:20px;perspective:4000px;}
+.privilege ul li{position:relative;float:left;width:300px;height:200px;margin-left:40px;margin-bottom:40px;margin-top:20px; transform-style: preserve-3d;transition:0.6s;cursor: pointer;}
+.privilege ul li span,.privilege ul li img{position:absolute;top:0;left:0;display:block;width:100%;height:200px;border-radius: 10px;}
+.privilege ul li span{transition:0.6s;background-image: url(../image/contact/privilegebg.jpg);opacity:0;transform:rotateX(-90deg) translateZ(100px);}
+.privilege ul li img{transform:translateZ(95px);transition:0.6s}
+.privilege ul li:hover{transform:rotateX(90deg)}
+.contact .privilege ul li:hover>img{opacity:0;}
+.contact .privilege ul li:hover>span{opacity:1}
+.privilege ul li span{box-sizing:border-box;padding:15px;}
+.afterSale .TabStrech ul li div p{padding:10px;}
+.join ul{list-style: disc}
+.join .joinContent{}
+.join .joinContent>ul{width:95%;border:1px solid #ccc;margin:15px auto;list-style:none;overflow:hidden;box-sizing:border-box;padding:30px 20px;}
+.join .joinContent>ul li{width:200px;float:left;margin-right:20%;}
+.join .joinContent>ul li span{font-size:16px;font-weight:bold;}
+.join .joinContent>ul li ul{padding-left:20px;}
+.join .joinContent>ul li ul li{height:40px;line-height:40px;}
+.contactMethod ul{float: left;padding-left: 5%;perspective:4000px;margin-top: 10px;width: 90%;margin: 0 auto;}
+.contactMethod ul li{height: 70px;width: 40%;float: left;font-size: 16px;}
+.contactMethod ul li:hover{color:#60bafb;}
+.contactMethod ul li:hover>span{color:#60bafb;font-weight:bolder;}
+.contactMethod ul li span{font-size: 30px;padding-right: 20px;color: #585859;}
+#container{height: 400px;}
+.info-content img,.info-content>span{float:left;}
+.info-content img{width:20%;margin-right:5%;}
+.info-content>span{width:75%;font-size:14px;}
+.info-title{padding:5px 3px;background:blue;color:#fff;}

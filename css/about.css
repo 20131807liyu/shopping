@@ -1,0 +1,52 @@
+.story,.quality,.course{width:100%;height:600px;background-size:100% 100%;}
+.story{background-image:url(../image/about/about_story.jpg);}
+.quality{background-image:url(../image/about/about_quality.jpg);}
+.course{background-image:url(../image/about/about_course.jpg);}
+.label{width:220px;height:65px;line-height:65px;text-align:center;background-color:#525355;}
+.label span{ position: relative;color: white;font-size: 27px;font-weight: bolder;letter-spacing: 4px;display: block;}
+.label span::before{position:absolute;content:"";top:10px;left:25px;width:20px;height:20px;border:4px solid #fff;border-bottom:none;border-right:none;}
+.label span::after{position:absolute;content:"";bottom:10px;right:25px;width:20px;height:20px;border:4px solid #fff;border-top:none;border-left:none;}
+.story>div{width:780px;height:500px;margin:0 auto;box-sizing:border-box;padding-top:50px;}
+.story .story_content{position:relative;background-color:#edeff0;height:400px; box-shadow:3px 3px 3px #333;}
+.story .story_content .txt{width:95%;margin:0px auto;padding:20px 0;overflow:hidden;}
+.story .story_content .txt img{width: 230px;height: 80px;float: left;}
+.story .story_content .txt span{font-size: 16px;text-align: left;width: 400px;float: left;padding-left: 15px;color: #333;}
+.story #stage{width:600px;height: 300px;position: absolute;bottom: 0; perspective:800px;-webkit-perspective:800px;-moz-persperspective:800px;perspective-origin:60%;/*决定你看的方位*/left:50%; transform:translateX(-50%);}
+/*
+.story #stage #container{transform-style:preserve-3d;position: absolute;width: 150px;height: 150px;top:0;left:0;right: 0;bottom:0;margin:auto;cursor: pointer;transition:1s;}
+.story #stage #container img{width: 100%;height: 100%;position: absolute;top:0;left:0;box-shadow: 3px 3px 3px;transition:0.3s;}
+*/
+.story #stage ul li:nth-of-type(1){top:80px;left:50px;z-index:50}
+.story #stage ul li:nth-of-type(2){top:60px;left:125px;z-index:90}
+.story #stage ul li:nth-of-type(3){top:40px;left:210px;z-index:100;}
+.story #stage ul li:nth-of-type(4){top:60px;right:125px;z-index:90;}
+.story #stage ul li:nth-of-type(5){top:80px;right:50px;z-index:50;}
+.story #stage ul{width:100%;height:100%;position:relative;}
+.story #stage ul li{width:150px;height:150px;position:absolute;}
+.story #stage ul li img{box-shadow:rgba(0,0,0,.2) 0 1px 5px 0;}
+.story #stage span{position:absolute;z-index:1000;top:100px;font-size:50px;font-weight: bolder;color:#fff;cursor:pointer}
+.story #stage span:hover{color:#aaa;}
+#sleft{left:160px;}
+#sright{right:160px;}
+/***********.quality************/
+.quality>div{box-sizing:border-box; width:700px;height:500px;margin-left:200px;padding-top:100px;}
+.quality .quality_content{width:100%;height:200px;margin-top:100px;}
+.quality .quality_content dl{width:200px;height:100%;float:left;margin-right:20px;}
+.quality .quality_content dl dt{width:80%;height:40px;line-height:40px;text-align:center;font-size:20px;color:#333;font-weight:bold;border:1px solid #333;}
+.quality .quality_content dl dd{position:relative;box-sizing:border-box;width:80%;height:150px; margin-top:10px;text-indent:2em;background:#999;font-size:14px;padding:10px 5px;}
+.quality .quality_content dl dd span{position:absolute;top:0;left:0;display:block; width:100%;height:100%;overflow:hidden;}
+.quality .quality_content dl dd span:hover img{left:0;transform-origin:left bottom;transform:rotate(-360deg);}
+.quality .quality_content dl dd span img{position:absolute;top:0;left:-100%; width:100%;height:100%;transition:0.4s;transform:rotate(-150deg);transform-origin:right bottom;}
+/***********.course************/
+.course>div{box-sizing:border-box;width:600px;height:400px;margin-left:260px;padding-top:90px;}
+.course .course_content{width:100%;height:300px;background-color: #edeff0;box-shadow: 3px 3px 3px #333;}
+.course .course_content ul{width:90%;margin-left:5%;border-left:8px solid #aaa
+    ;}
+.course .course_content ul li{position:relative;text-indent:2em;height:50px;line-height:50px;cursor:pointer;}
+.course .course_content ul li::before{position:absolute;top:16px;left:-15px;content:"";width:20px;height:20px;border-radius:50%;background:#525355;transition:0.4s;}
+.course .course_content ul li:hover::before{background:#fff;}
+.course .course_content ul li:hover{color:green;font-weight:bolder;}
+/***************ad*****************/
+.ad{position:relative;width:100%;height:180px;margin:0 auto;margin-bottom:10px;margin-top:10px;overflow:hidden;}
+.ad .adShow{width: 100%;height:540px;position: absolute;top:0;font-size: 0;transition:0.6s}
+.ad .adShow li{width:100%;}
